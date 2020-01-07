@@ -16,8 +16,19 @@ export default function PhotoList(){
     .catch(err=>{
       console.log(`Today's error is: ${err}`);
     })
-  },[])
-console.log(setPic);
+  },[pic])
 
-return null;
+
+  return (
+    <div className="post-container">
+        <PhotoCard
+          key={pic.date}
+          picUrl={pic.url}
+          title={pic.title}
+          exp={pic.explanation}
+          hdUrl={pic.hdurl}
+        />
+        //issue there was that i didn't need to loop through things because it's just one picture a day
+    </div>
+  )
 }

@@ -8,7 +8,7 @@ export default function PhotoList(){
 
   useEffect(()=>{
     axios
-    .get("https://api.nasa.gov/planetary/apod?api_key=ikuPkhYl79MxL4UHkbuTnzYKzr36mqxNK7BRrMEQ")
+    .get("https://api.nasa.gov/planetary/apod")
     .then(res=>{
     setPic(res.data);
     console.log("logged data is: ", res.data);

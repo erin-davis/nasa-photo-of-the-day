@@ -10,7 +10,7 @@ export default function PicList(){
 
   useEffect(()=>{
     axios
-      .get('https://api.nasa.gov/planetary/apod?api_key=2RgdYgx8TA9uU1sMwgjG9toP1M6OcMBccaKTPejN')
+      .get('https://api.nasa.gov/planetary/apod?')
       .then(response =>{
         console.log(response);
         setPicture(response.data);
